@@ -1,0 +1,56 @@
+<div class="container mt-4">
+    <h3>{{ isEdit ? 'Edit Patient' : 'Add Patient' }}</h3>
+    <form (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          id="name"
+          class="form-control"
+          [(ngModel)]="patient.name"
+          name="name"
+          required
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label for="age" class="form-label">Age</label>
+        <input
+          type="number"
+          id="age"
+          class="form-control"
+          [(ngModel)]="patient.age"
+          name="age"
+          required
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label for="contact" class="form-label">Contact</label>
+        <input
+          type="text"
+          id="contact"
+          class="form-control"
+          [(ngModel)]="patient.contact"
+          name="contact"
+          required
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label for="address" class="form-label">Address</label>
+        <input
+          type="text"
+          id="address"
+          class="form-control"
+          [(ngModel)]="patient.address"
+          name="address"
+          required
+        />
+      </div>
+  
+      <button type="submit" class="btn btn-primary me-2">{{ isEdit ? 'Update' : 'Create' }}</button>
+      <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+    </form>
+  </div>
+  

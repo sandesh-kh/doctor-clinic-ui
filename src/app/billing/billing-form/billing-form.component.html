@@ -1,0 +1,43 @@
+<div class="container mt-4">
+  <h3>{{ isEdit ? 'Edit Billing' : 'Create Billing' }}</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="patientId" class="form-label">Patient ID</label>
+      <input
+        type="number"
+        id="patientId"
+        class="form-control"
+        [(ngModel)]="billing.patientId"
+        name="patientId"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="amount" class="form-label">Amount</label>
+      <input
+        type="number"
+        id="amount"
+        class="form-control"
+        [(ngModel)]="billing.amount"
+        name="amount"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="date" class="form-label">Date</label>
+      <input
+        type="date"
+        id="date"
+        class="form-control"
+        [(ngModel)]="billing.date"
+        name="date"
+        required
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary me-2">{{ isEdit ? 'Update' : 'Create' }}</button>
+    <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+  </form>
+</div>

@@ -1,0 +1,79 @@
+/* Table container styling */
+.table-container {
+    padding: 1.5rem;
+    background-color: #f5faff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+  }
+  
+  /* Light header row */
+  thead th {
+    background-color: #E3F2FD; /* Light blue for header */
+    color: #333;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid #d0e2f2;
+  }
+  
+  /* Alternate row colors for table body */
+  tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Light grey for odd rows */
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #ffffff; /* White for even rows */
+  }
+  
+  /* Row hover effect */
+  tbody tr:hover {
+    background-color: #e3f2fd;
+  }
+  
+  /* Cell padding */
+  td {
+    padding: 12px;
+    color: #333;
+  }
+  
+  /* Action buttons */
+  .action-btn {
+    background-color: #3A6EA5;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  .action-btn:hover {
+    background-color: #2A4E76;
+  }
+  
+  /* Add button styling */
+  .add-doctor-btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+  }
+  
+  .add-doctor-btn:hover {
+    background-color: #218838;
+  }
+  

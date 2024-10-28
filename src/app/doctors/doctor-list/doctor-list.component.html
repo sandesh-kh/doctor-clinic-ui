@@ -1,0 +1,36 @@
+<div class="container mt-4">
+  <h2>Doctor List</h2>
+  <button routerLink="/doctors/add" class="btn btn-primary">Add Doctor</button>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Specialization</th>
+          <th>Contact</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let doctor of doctors">
+          <td>{{ doctor.name }}</td>
+          <td>{{ doctor.specialization }}</td>
+          <td>{{ doctor.contact }}</td>
+          <td>
+            <button
+              class="btn btn-primary btn-sm me-2"
+              (click)="editDoctor(doctor.id)"
+            >
+              Edit
+            </button>
+            <button
+              class="btn btn-danger btn-sm"
+              (click)="deleteDoctor(doctor.id)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

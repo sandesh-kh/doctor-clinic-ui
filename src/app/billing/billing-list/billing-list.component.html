@@ -1,0 +1,37 @@
+<div class="container mt-4">
+    <h3>Billings</h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Patient ID</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let billing of billings">
+          <td>{{ billing.patientId }}</td>
+          <td>{{ billing.amount }}</td>
+          <td>{{ billing.status }}</td>
+          <td>{{ billing.date }}</td>
+          <td>
+            <button
+              class="btn btn-primary btn-sm me-2"
+              (click)="editBilling(billing.id)"
+            >
+              Edit
+            </button>
+            <button
+              class="btn btn-danger btn-sm"
+              (click)="deleteBilling(billing.id)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

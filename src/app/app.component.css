@@ -1,0 +1,27 @@
+/* Ensures the entire viewport height is used */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  /* Main container for content and footer */
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Fills up available space between navbar and footer */
+  .main-content {
+    flex: 1;
+    padding: 1.5rem; /* Optional padding for content */
+  }
+  
+  /* Footer styling */
+  app-footer {
+    background-color: #2A3E59; /* Consistent with earlier footer color */
+    color: #f0f8ff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
